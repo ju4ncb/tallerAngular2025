@@ -7,3 +7,24 @@
     </div>
   </div>
 </header>
+<section class="section-inputs">
+  <div>
+    <select (change)="onClienteSelectChange($event)">
+      @for (cliente of clientes; track cliente) {
+        <option id={{cliente.customerNumber}} value={{cliente.customerName}} [attr.data-object]="cliente">{{cliente.customerName}}</option>
+      }
+    </select>
+    <div>
+      <p>customerNumber: {{clienteActual}}</p>
+      <p>customerName: {{clienteActual}}</p>
+      <p>phone: {{clienteActual}}</p>
+    </div>
+  </div>
+  <div>
+    <select>
+      @for (orden of ordenes; track orden) {
+        <option id={{orden.orderNumber}} value={{orden.orderNumber}}>{{orden.orderNumber}}</option>
+      }
+    </select>
+  </div>
+</section>

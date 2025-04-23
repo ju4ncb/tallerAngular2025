@@ -74,7 +74,7 @@ export class AppComponent {
         });
       } else {
         Swal.fire({
-          title: 'Este ciente no tiene ordenes.',
+          title: 'Este cliente no tiene ordenes.',
           icon: 'info',
         });
         this.productosOrdenes = [];

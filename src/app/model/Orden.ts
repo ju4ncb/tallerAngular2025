@@ -1,6 +1,6 @@
-interface Orden{
-    orderNumber: number;
-    orderDate: string;
+interface Orden {
+  orderNumber: string;
+  orderDate: string;
 }
 
 export default Orden;

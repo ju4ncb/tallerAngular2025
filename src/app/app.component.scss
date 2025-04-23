@@ -1,0 +1,46 @@
+$block-bg: #e4e9ec;
+$block-button: #94d6eb;
+
+.section-inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+  align-items: center;
+  .input-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    background: $block-bg;
+    width: min(1000px, 90%);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+    .select {
+      width: max-content;
+    }
+    .info {
+      width: 360px;
+      padding: 10px 10px;
+      border-radius: 10px;
+      border-bottom: $block-button 2px solid;
+      margin-bottom: 10px;
+      p {
+        margin: 0;
+      }
+    }
+    .ok {
+      background: $block-button;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+.section-table {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+  justify-content: center;
+  align-items: center;
+}

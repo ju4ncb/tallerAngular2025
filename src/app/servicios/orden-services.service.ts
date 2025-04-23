@@ -1,21 +1,21 @@
-//se conecta a la API por los puertos get, post, put, delete 
+//se conecta a la API por los puertos get, post, put, delete
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OrdenServicesService {
-//ruta de la API a consultar
-API_URL='http://172.16.8.200/Apipedidos/orders.php'
-  constructor(private http:HttpClient) { }
+  //ruta de la API a consultar
+  API_URL = 'http://localhost/Apipedidos/orderscustomers.php';
+  constructor(private http: HttpClient) {}
   //llamar la API para traer los n registros
-  getAll(){
-    return this.http.get(this.API_URL).pipe(
-      catchError(this.handleError)
-    );
+  getOrdersByCustomer(id: number): Observable<any> {
+    return this.http
+      .get(`${this.API_URL}?id=${id}`)
+      .pipe(catchError(this.handleError));
   }
 
   // Para los errores
